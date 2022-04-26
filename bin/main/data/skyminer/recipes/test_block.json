@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "skyminer:test_item"
+    }
+  },
+  "result": {
+    "item": "skyminer:test_block"
+  }
+}

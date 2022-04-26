@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "gcg",
+    "wmw",
+    "www"
+  ],
+  "key": {
+    "m": {
+      "item": "bmcsbc:minecoin"
+    },
+    "w": {
+      "tag": "minecraft:planks"
+    },
+    "g": {
+      "item": "minecraft:gold_nugget"
+    },
+    "c": {
+      "item": "minecraft:red_carpet"
+    }
+  },
+  "result": {
+    "item": "bmcsbc:market_stall"
+  }
+}

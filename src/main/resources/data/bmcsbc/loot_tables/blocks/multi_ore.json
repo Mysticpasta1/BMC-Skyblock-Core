@@ -1,0 +1,408 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                    "entity": "this",
+                    "luckModifier": 2,
+                    "baseChance": 0.004
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                    "harvestLevel": 3
+                }
+              ],
+              "name": "minecraft:ancient_debris"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:uniform_bonus_count",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 2,
+                  "baseChance": 0.013
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": false
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 2
+                }
+              ],
+              "name": "minecraft:diamond"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:uniform_bonus_count",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 2,
+                  "baseChance": 0.013
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": true
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 2
+                }
+              ],
+              "name": "minecraft:diamond_ore"
+            },
+            {
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:uniform_bonus_count",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                }
+              ],
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 2,
+                  "baseChance": 0.01
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": false
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 2
+                }
+              ],
+              "name": "minecraft:emerald"
+            },
+            {
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:uniform_bonus_count",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                }
+              ],
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 2,
+                  "baseChance": 0.01
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": true
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 2
+                }
+              ],
+              "name": "minecraft:emerald_ore"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 4.0,
+                    "max": 9.0,
+                    "type": "minecraft:uniform"
+                  }
+                },
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:uniform_bonus_count",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 0.8,
+                  "baseChance": 0.22
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": false
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 2
+                }
+              ],
+              "name": "minecraft:lapis_lazuli"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:uniform_bonus_count",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 0.8,
+                  "baseChance": 0.22
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": true
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 2
+                }
+              ],
+              "name": "minecraft:lapis_ore"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 4.0,
+                    "max": 5.0,
+                    "type": "minecraft:uniform"
+                  }
+                },
+
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:uniform_bonus_count",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 0.9,
+                  "baseChance": 0.25
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": false
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 2
+                }
+              ],
+              "name": "minecraft:redstone"
+            },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:uniform_bonus_count",
+              "parameters": {
+                "bonusMultiplier": 1
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "bmcsbc:random_chance_with_luck",
+              "entity": "this",
+              "luckModifier": 0.9,
+              "baseChance": 0.25
+            },
+            {
+              "condition": "bmcsbc:has_silk_touch",
+              "shouldHave": true
+            },
+            {
+              "condition": "bmcsbc:tool_has_harvest_level",
+              "harvestLevel": 2
+            }
+          ],
+          "name": "minecraft:redstone_ore"
+        },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 0.9,
+                  "baseChance": 0.2
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 1
+                }
+              ],
+              "name": "minecraft:iron_ore"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 1.2,
+                  "baseChance": 0.1
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 1
+                }
+              ],
+              "name": "minecraft:gold_ore"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 0.5,
+                  "baseChance": 0.57
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": false
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 0
+                }
+              ],
+              "name": "minecraft:cobblestone"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "bmcsbc:random_chance_with_luck",
+                  "entity": "this",
+                  "luckModifier": 0.7,
+                  "baseChance": 0.4
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": false
+                },
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 0
+                }
+              ],
+              "name": "minecraft:coal"
+            },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "bmcsbc:random_chance_with_luck",
+              "entity": "this",
+              "luckModifier": 0.7,
+              "baseChance": 0.4
+            },
+            {
+              "condition": "bmcsbc:has_silk_touch",
+              "shouldHave": true
+            },
+            {
+              "condition": "bmcsbc:tool_has_harvest_level",
+              "harvestLevel": 0
+            }
+          ],
+          "name": "minecraft:coal_ore"
+        },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 0
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": false
+                }
+              ],
+              "name": "minecraft:cobblestone"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "bmcsbc:tool_has_harvest_level",
+                  "harvestLevel": 0
+                },
+                {
+                  "condition": "bmcsbc:has_silk_touch",
+                  "shouldHave": true
+                }
+              ],
+              "name": "minecraft:stone"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
