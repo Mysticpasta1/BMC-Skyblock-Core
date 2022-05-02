@@ -2,9 +2,14 @@ buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
+        maven {
+            name = 'sponge'
+            url = 'https://repo.spongepowered.org/maven'
+        }
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 
@@ -12,6 +17,7 @@ apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: 'org.spongepowered.mixin'
 
 version = '0.6.5'
 group = 'com.bmc.coremod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -35,14 +41,15 @@ minecraft {
     mappings channel: 'official', version: '1.16.5'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
     runs {
         client {
+            property 'mixin.env.disableRefMap', 'true'
             workingDirectory project.file('run')
-
+            arg "-mixin.config="+archivesBaseName+".mixins.json"
             // Recommended logging data for a userdev environment
             // The markers can be changed as needed.
             // "SCAN": For mods scan.
@@ -63,7 +70,9 @@ minecraft {
         }
 
         server {
+            property 'mixin.env.disableRefMap', 'true'
             workingDirectory project.file('run')
+            arg "-mixin.config="+archivesBaseName+".mixins.json"
 
             // Recommended logging data for a userdev environment
             // The markers can be changed as needed.
@@ -118,7 +127,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.2'
+    minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

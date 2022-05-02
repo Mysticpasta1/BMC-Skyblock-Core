@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.bmc.coremod.mixin.common",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "atlantis.refmap.json",
+  "mixins": [
+    "LayerAccessor"
+  ],
+  "client":[
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

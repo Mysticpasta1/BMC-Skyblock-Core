@@ -14,6 +14,6 @@ public class IslandGolemEntity extends GolemEntity {
     }
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
-
+        return null;
     }
 }
